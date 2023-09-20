@@ -1,7 +1,6 @@
 import Logo from "../assets/logop.png";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { TbDiscount2 } from "react-icons/tb";
-import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <>
@@ -12,9 +11,7 @@ const NavBar = () => {
           </div>
           <div>
             <ul className="flex space-x-5 md:space-x-10 text-lg font-medium items-center">
-              <li className="hover:text-orange-500 cursor-pointer">
-                <Link to="/home">Home</Link>
-              </li>
+              <li className="hover:text-orange-500 cursor-pointer">Home</li>
               <li className="hover:text-orange-500 cursor-pointer text-2xl">
                 <span>
                   <TbDiscount2 />

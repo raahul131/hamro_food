@@ -1,6 +1,7 @@
 import { AiOutlineSearch } from "react-icons/ai";
 
 const SearchBar = () => {
+  let searchTxt = "KFC"
   return (
     <>
       <div className="flex items-center justify-between border- border-2 my-7 mx-8 md:mx-48 rounded-lg p-2 space-x-2">
@@ -8,6 +9,10 @@ const SearchBar = () => {
           type="text"
           placeholder="Search your foods and restaurants"
           className="w-full outline-none"
+          value={searchTxt}
+          onChange={(e) => {
+            searchTxt = e.target.value
+          }}
         />
         <span className="text-2xl text-zinc-400">
           <AiOutlineSearch />
