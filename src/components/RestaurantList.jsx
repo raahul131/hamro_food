@@ -4,6 +4,7 @@ import RestaurantCard from "../components/RestaurantCard";
 import { IMG_CDN_URL, RESTAURANT_LIST } from "../utils/constants";
 import Shimmer from "./Shimmer";
 import { AiOutlineSearch } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const RestaurantList = (props) => {
   const [loading, setLoading] = useState(true);
@@ -35,13 +36,17 @@ const RestaurantList = (props) => {
         setLoading(false);
 
         setFilteredRestaurants(
-          res?.data?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
-            ?.restaurants
+          res?.data?.data?.success?.cards[1]?.gridWidget?.gridElements
+            ?.infoWithStyle?.restaurants
         );
 
+        console.log(
+          res?.data?.data?.success?.cards[1]?.gridWidget?.gridElements
+            ?.infoWithStyle?.restaurants
+        );
         setAllRestarants(
-          res?.data?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
-            ?.restaurants
+          res?.data?.data?.success?.cards[1]?.gridWidget?.gridElements
+            ?.infoWithStyle?.restaurants
         );
       })
       .catch((err) => {
@@ -97,15 +102,16 @@ const RestaurantList = (props) => {
         </div>
         <div className="flex justify-center flex-wrap gap-5 items-center mx-10">
           {filteredRestaurants?.map((item, id) => (
-            <RestaurantCard
-              key={id}
-              name={item.info.name}
-              avgRating={item.info.avgRating}
-              image={IMG_CDN_URL + item.info.cloudinaryImageId}
-              costForTwo={item.info.costForTwo}
-              cuisines={item.info.cuisines}
-              deliveryTime={item.info.sla.deliveryTime}
-            />
+            <Link to={"/restaurant/" + item.info.id} key={id}>
+              <RestaurantCard
+                name={item.info.name}
+                avgRating={item.info.avgRating}
+                image={IMG_CDN_URL + item.info.cloudinaryImageId}
+                costForTwo={item.info.costForTwo}
+                cuisines={item.info.cuisines}
+                deliveryTime={item.info.sla.deliveryTime}
+              />
+            </Link>
           ))}
         </div>
       </div>
