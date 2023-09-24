@@ -4,6 +4,8 @@ import axios from "axios";
 import MenuShimmer from "../components/MenuShimmer";
 import { IMG_CDN_URL } from "../utils/constants";
 
+
+
 const RestaurantMenu = () => {
   const params = useParams();
   const { id } = params;

@@ -8,9 +8,9 @@ const NavBar = () => {
     <>
       <div className="">
         <div className="flex items-center justify-between shadow-md px-4 h-16 bg-white">
-          <div className="cursor-pointer">
+          <Link to="/" className="cursor-pointer">
             <img src={Logo} alt="logo" className="h-12 w-12" />
-          </div>
+          </Link>
           <div>
             <ul className="flex space-x-5 md:space-x-10 text-lg font-medium items-center">
               <li className="hover:text-orange-500 cursor-pointer">

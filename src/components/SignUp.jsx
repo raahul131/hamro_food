@@ -30,7 +30,7 @@ const SIgnUp = () => {
               <button className="bg-orange-400 hover:bg-orange-500 text-white font-bold p-2 rounded-lg m-10 w-full text-center cursor-pointer">
                 SignUp
               </button>
-              <Link to="/login" className="text-orange-500 underline">LogIn</Link>
+              <Link to="/login">Back to <span className="text-orange-500 underline ">LogIn</span></Link>
             </div>
           </div>
         </div>
