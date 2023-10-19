@@ -1105,3 +1105,9 @@ export const MENU_IMG_CDN_URL =
 
 export const FETCH_MENU_URL =
   "https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.8787333&lng=77.6297814&restaurantId=323187";
+
+export const OFFERS_URL =
+  "https://www.swiggy.com/dapi/offers/payment?lat=12.913397&lng=77.559001&offset=0";
+
+export const OFFER_IMG_URL =
+  "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/";

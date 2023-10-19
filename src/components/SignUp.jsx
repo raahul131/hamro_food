@@ -5,7 +5,7 @@ const SIgnUp = () => {
     <>
       <div>
         <div className="h-screen flex items-center justify-center">
-          <div className="h-[400px] w-[300px] border-2 border-black rounded-lg">
+          <div className="h-[400px] w-[300px]  rounded-lg mt-10">
             <div className="mt-4 text-center font-semibold text-lg underline">
               Create an account
             </div>

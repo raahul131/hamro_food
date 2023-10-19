@@ -22,6 +22,7 @@ const RestaurantList = (props) => {
     );
     // console.log("after search::", filteredData);
     setFilteredRestaurants(filteredData);
+    setSearchInput("");
   }
 
   useEffect(() => {
@@ -40,10 +41,10 @@ const RestaurantList = (props) => {
             ?.infoWithStyle?.restaurants
         );
 
-        console.log(
-          res?.data?.data?.success?.cards[1]?.gridWidget?.gridElements
-            ?.infoWithStyle?.restaurants
-        );
+        // console.log(
+        //   res?.data?.data?.success?.cards[1]?.gridWidget?.gridElements
+        //     ?.infoWithStyle?.restaurants
+        // );
         setAllRestarants(
           res?.data?.data?.success?.cards[1]?.gridWidget?.gridElements
             ?.infoWithStyle?.restaurants
@@ -76,23 +77,23 @@ const RestaurantList = (props) => {
   ) : (
     <>
       <div>
-        <div className="flex items-center justify-between border- border-2 my-7 mx-8 md:mx-48 rounded-lg p-2 space-x-2">
+        <div className="flex items-center justify-between my-7 mx-8 md:mx-48 rounded-lg p-2 space-x-2">
           <input
             type="text"
-            placeholder="Search your foods and restaurants"
-            className="w-full outline-none"
+            placeholder="Search foods and restaurants..."
+            className="w-full outline-none border-2 p-2 rounded-lg"
             value={searchInput}
             onChange={(e) => {
               setSearchInput(e.target.value);
             }}
           />
 
-          <span className="text-2xl text-zinc-400">
+          {/* <span className="text-2xl text-zinc-400">
             <AiOutlineSearch />
-          </span>
+          </span> */}
 
           <button
-            className="p-1 px-2 pb-2 bg-orange-500 font-bold text-white hover:text-orange-500 hover:bg-white rounded-lg transition-all duration-300"
+            className="p-2 pb-2 bg-orange-500 font-bold text-white hover:text-orange-500 hover:bg-white rounded-lg transition-all duration-300"
             onClick={() => {
               filterData(searchInput);
             }}
@@ -100,6 +101,7 @@ const RestaurantList = (props) => {
             Search
           </button>
         </div>
+
         <div className="flex justify-center flex-wrap gap-5 items-center mx-10">
           {filteredRestaurants?.map((item, id) => (
             <Link to={"/restaurant/" + item.info.id} key={id}>

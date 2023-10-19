@@ -7,7 +7,7 @@ const NavBar = () => {
   return (
     <>
       <div className="">
-        <div className="flex items-center justify-between shadow-md px-4 h-16 bg-white">
+        <div className="flex items-center justify-between shadow-lg px-4 h-16 bg-white sticky">
           <Link to="/" className="cursor-pointer">
             <img src={Logo} alt="logo" className="h-12 w-12" />
           </Link>
@@ -25,11 +25,8 @@ const NavBar = () => {
                 </Link>
               </li>
 
-              <li className="hover:text-orange-500 cursor-pointer">
-                <Link to="/contact">Contact</Link>
-              </li>
               <Link to="/login">
-                <li className="hover:text-orange-500 cursor-pointer">
+                <li className="hover:bg-orange-700 cursor-pointer hover:text-white bg-orange-500 p-2 text-white font-bold tracking-wide rounded-md">
                   LogIn
                 </li>
               </Link>

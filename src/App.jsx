@@ -11,7 +11,21 @@ import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Login from "./components/Login";
 import SIgnUp from "./components/SignUp";
+import { useEffect } from "react";
+import miniAppinitializer from "../miniAppInitializer";
+
 const App = () => {
+  // const [errMessage, setErrMessage] = useState(false);
+
+  useEffect(() => {
+    miniAppinitializer()
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((ex) => {
+        console.log(ex);
+      });
+  }, []);
   return (
     <>
       <NavBar />

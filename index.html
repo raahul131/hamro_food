@@ -1,13 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>Hamro Food</title>
+
+    <!-- <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("./sw.js", { scope: "/" })
+          .then(function (registration) {
+            console.log("Service worker registered");
+          });
+        navigator.serviceWorker.ready.then(function (registration) {
+          console.log("service worker Ready");
+        });
+      }
+    </script> -->
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/App.jsx"></script>
+
+    <script src="https://mini-app-sdk-dev.hamropatro.com/main-1.1.js"></script>
   </body>
 </html>

@@ -8,7 +8,7 @@ const RestaurantCard = ({
   cuisines,
   deliveryTime,
 }) => {
-  console.log("name", name);
+  // console.log("name", name);
   return (
     <>
       <div className="w-[268px] h-[312px] m-4 rounded-lg shadow-md items-center cursor-pointer hover:shadow-xl transition-all duration-300 hover:scale-105">
@@ -16,7 +16,7 @@ const RestaurantCard = ({
         <div className="my-2">
           <div className="px-2 text-base font-bold text-[#282c3f]">{name}</div>
           <div className="h-[48px] w-auto px-2 pt-1 text-sm text-[#686b78] break-words whitespace-normal line-clamp-2">
-            {cuisines.join(", ")}
+            {cuisines?.join(", ")}
           </div>
         </div>
         <div
@@ -25,7 +25,8 @@ const RestaurantCard = ({
             justifyContent: "space-between",
             alignItems: "center",
             padding: "8px",
-            fontSize: "12px",
+            fontSize: "13px",
+            fontWeight: 630,
           }}
         >
           <div
